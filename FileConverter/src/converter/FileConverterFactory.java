@@ -4,7 +4,6 @@ package converter;
 public class FileConverterFactory {
     // Declare class instance and builders
     private static FileConverterFactory fileConverterFactory = null;
-    private ConvertCsvToTsv csvToTsv = new ConvertCsvToTsv();
 
     // Class instantiator
     public static FileConverterFactory getInstance()
@@ -14,10 +13,9 @@ public class FileConverterFactory {
         return fileConverterFactory;
     }
 
-    // Call conversion from .csv to .tsv
-    public void csvToTsv()
+    // Create csv converter
+    public CsvConverter createCsvToTsvConverter()
     {
-        csvToTsv.chooseFile();
-        csvToTsv.convert();
+        return new CsvConverter();
     }
 }

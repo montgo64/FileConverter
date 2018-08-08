@@ -6,8 +6,7 @@ import javax.swing.JFileChooser;
 import javax.swing.filechooser.FileNameExtensionFilter;
 import javax.swing.filechooser.FileSystemView;
 
-// Abstract Builder. Super class that concrete builds inherit from.
-//
+// Abstract Builder Prototype. Super class that concrete builds inherit from.
 public class ConverterBuilder {
     // Selected file from chooseFile
     File file;
@@ -15,6 +14,14 @@ public class ConverterBuilder {
     String extensionName;
     // Filtered extension for File Chooser
     String extension;
+    // New Extension
+    String newExtension;
+
+    // Set new extension
+    public void setNewExtension(String newExtension)
+    {
+        this.newExtension = newExtension;
+    }
 
     // Constructor
     public ConverterBuilder()
